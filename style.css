@@ -1,0 +1,803 @@
+/* TEMPLATE */
+span {
+    font-weight: bold;
+}
+
+#title {
+    text-align: center;
+    color: red;
+}
+
+#source_et_contact {
+    position: absolute;
+    top: 93%;
+    left : 10%;
+
+}
+body{
+	background-color: #A1E0FF;
+}
+
+
+/* ACCUEIL */
+#erra {
+    position: absolute;
+    top : 52%;
+    left : 70%;
+    color: red;
+    font-size: large;
+}
+
+#contexte {
+    position: absolute;
+    padding-right: 10%;
+    font-size: 130%; 
+    text-align: center;
+    top : 8%;
+    left : 8%;
+}
+
+#texte_lp {
+    position: absolute;
+    padding-right:35%;
+    font-size: 130%; 
+    top : 23%;
+    left : 10%;
+    text-align: justify;
+}
+
+#texte_mc {
+    position: absolute;
+    padding-right:35%;
+    font-size: 130%; 
+    top : 53%;
+    left : 10%;
+    text-align: justify;
+}
+
+#photo_lp {
+    position: absolute;
+    width : 9%;
+	height : 20%;
+    top : 25%;
+    left : 0.5%;
+}
+
+#photo_mc {
+    position: absolute;
+    width : 9%;
+	height : 23%;
+    top : 55%;
+    left : 0.5%;
+}
+
+#plus_dinfos {
+    position: absolute;
+    font-style: italic;
+    top : 65%;
+    left : 78%;
+}
+
+#qcsoupas {
+    position: absolute;
+    padding-right:5%;
+    font-size: 140%; 
+    text-decoration: underline purple;
+    top : 23%;
+    left : 78%;
+}
+
+#go {
+    position: absolute;
+    padding: 1px;
+    font-size: 100%;
+    background-color: #CAF0C7;
+    top : 43%;
+    left : 78%;
+}
+    
+#resultac {
+    position: absolute;
+    top : 45%;
+    left : 78%;
+}
+
+
+/* DEBUT QCS */
+#err{
+    position: absolute;
+    color: red;
+    top : 78%;
+    left : 50%;
+    font-size: large;
+}
+
+#pre_qcs{
+	position: absolute;
+	font-style: italic;
+	font-size: 130%;
+	top : 5%;
+    left : 40%;
+}
+#mespref{
+	position: absolute;
+	top : 25%;
+    left : 8%;
+    font-size: 130%;
+}
+#temps{
+	position: absolute;
+	top : 50%;
+    left : 8%;
+    font-size: 130%;
+}
+#expli{
+	position: absolute;
+    font-size: 160%; 
+    text-align: center;
+    top : 10%;
+    left : 8%;
+}
+
+#btv1{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 5px;
+	padding: 1px;
+    font-size: 100%;
+	top : 33%;
+    left : 30%;
+}
+#btv2{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 33%;
+    left : 44%;
+    
+}
+
+#btv3{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 33%;
+    left : 70%;
+}
+
+#btv4{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 33%;
+    left : 19%;
+}
+
+#btv5{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 33%;
+    left : 14.25%;
+}
+#btv6{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 39%;
+    left : 19.25%;
+}
+#btv7{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 39%;
+    left : 41%;
+}
+#btv8{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 39%;
+    left : 48%;
+}
+#btv9{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 39%;
+    left : 65.5%;
+}
+#btv10{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 39%;
+    left : 12.25%;
+}
+#btv11{
+    display: inline-block;
+    background-color: #EBD2E7;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: auto;
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 39%;
+    left : 73.75%;
+}
+#bt1{
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 62%;
+    left : 30%;
+    background-color: orange;
+}
+#bt2{
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 62%;
+    left : 37%;
+    background-color: orange;
+}
+#bt3{
+	position: absolute;
+	padding: 1px;
+    font-size: 100%;
+	top : 62%;
+    left : 44%;
+    background-color: orange;
+}
+
+#next {
+    position: absolute;
+    padding: 1px;
+    font-size: 100%;
+    background-color: #CAF0C7;
+    top : 80%;
+    left : 85%;
+}
+
+/* QCS */
+#qres{
+    position: absolute;
+    top : 75%;
+    left : 70%;
+}
+
+#qcs{
+	position: absolute;
+	font-style: italic;
+	font-size: 130%;
+	top : 7%;
+    left : 43%;
+}
+
+#approuvezvous{
+	position: absolute;
+	font-style: italic;
+	top : 25%;
+    left : 43%;
+    font-size: 130%;
+}
+
+#mesure{
+	position: absolute;
+	top : 35%;
+    left : 30%;
+    font-family: monospace;
+    font-size: 200%;
+    padding-right: 30%;
+    
+    text-align: justify;
+}
+
+#oui{
+	position: absolute;
+	top : 77%;
+    left : 42%;
+    border: none;
+    padding: 5px;
+    border-radius:50%;
+    background-color: blue;
+}
+
+#non{
+	position: absolute;
+	top : 77%;
+    left : 48%;
+    border: none;
+    padding: 5px;
+    background-color: blue;
+    border-radius:50%;
+}
+
+#passer{
+    text-decoration: underline;
+	position: absolute;
+	top : 82%;
+    left : 44.3%;
+    border: none;
+    background: none;
+    padding: 0px;
+    padding-right: 1px;
+    padding-left: 1px;
+    font-size: 100%;
+}
+
+
+/* RESULTATS */
+
+#imggagneg {
+    position: absolute;
+    top : 20%;
+    left : 55%;
+    width : 9%;
+	height : 23%;
+}
+
+#result{
+	position: absolute;
+	font-style: italic;
+	font-size: 130%;
+	top : 6%;
+    left : 40%;
+}
+
+#affichres{
+	position: absolute;
+	top : 50%;
+    left : 20%;
+}
+
+#imgmlp {
+    position : absolute;
+    top : 20%;
+    left : 45%;
+    width : 9%;
+	height : 20%;
+}
+
+#egalite {
+    position : absolute;
+    top : 20%;
+    left : 35%;
+    width : 9%;
+	height : 23%;
+}
+
+#imgmcrn {
+    position : absolute;
+    top : 20%;
+    left : 45%;
+    width : 9%;
+	height : 23%;
+}
+
+
+#returndeb{
+	position: absolute;
+	top : 85%;
+    background-color: #CAF0C7;
+    left : 80%;
+}
+
+
+
+
+
+
+
+
+
+/* TELEPHONE */
+
+#ttitle {
+    text-align: center;
+    color: red;
+    font-size: 130%;
+}
+
+#tsource_et_contact {
+    position: absolute;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    top: 145%;
+    left : 2%;
+}
+
+/* ACCUEIL */
+
+#terra {
+    position: absolute;
+    top : 20%;
+    left : 65%;
+    color: red;
+    font-size: large;
+}
+
+#tcontexte {
+    position: absolute;
+    top : 7%;
+    padding-right:8%;
+    left : 8%;
+    text-align: justify;
+}
+
+#ttexte_lp {
+    position: absolute;
+    padding-right:3%;
+    top : 33.5%;
+    left : 45%;
+    text-align: justify;
+}
+
+#ttexte_mc {
+    position: absolute;
+    padding-right:3%;
+    top : 85%;
+    left : 45%;
+    text-align: justify;
+}
+
+#tphoto_lp {
+    position: absolute;
+    width : 40%;
+    height : 20%;
+    top : 37.5%;
+    left : 2%;
+}
+
+#tphoto_mc {
+    position: absolute;
+    width : 35%;
+    height : 22%;
+    top : 101%;
+    left : 4%;
+}
+
+#tplus_dinfos {
+    position: absolute;
+    top : 67%;
+    left : 78%;
+}
+
+#tqcsoupas {
+    position: absolute;
+    padding-right:62%;
+    top : 68%;
+    left : 7%;
+    text-align: justify;
+}
+
+#tgo {
+    position: absolute;
+    top : 90%;
+    left : 7%;
+}
+
+#tresultac {
+    position: absolute;
+    top : 137%;
+    left : 4%;
+}
+
+
+/* PRE QCS */
+
+#terr{
+    position: absolute;
+    color: red;
+    top : 85%;
+    left : 50%;
+    font-size: large;
+}
+
+#tpre_qcs{
+        font-style: italic;
+        text-align: center;
+        font-size: 130%;
+        top : 7%;
+   
+}
+#tmespref{
+    position: absolute;
+    top : 28%;
+    left : 10%;
+}
+#ttemps{
+    position: absolute;
+    top : 70%;
+    left : 10%;
+}
+#texpli{
+    position: absolute;
+    top : 15%;
+    left : 10%;
+    font-size: medium;
+}
+
+#tbtv1{
+    position: absolute;
+    top : 45%;
+    left : 5%;
+}
+
+#tbtv2{
+    position: absolute;
+    top : 60%;
+    left : 1.5%;
+
+}
+
+#tbtv3{
+    position: absolute;
+    top : 45%;
+    left : 63%;
+}
+
+#tbtv4{
+    position: absolute;
+    top : 40%;
+    left : 3%;
+}
+
+#tbtv5{
+        position: absolute;
+        top : 40%;
+    left : 84.5%;
+}
+#tbtv6{
+        position: absolute;
+        top : 55%;
+    left : 2%;
+}
+#tbtv7{
+        position: absolute;
+        top : 50%;
+    left : 71%;
+}
+#tbtv8{
+        position: absolute;
+        top : 50%;
+    left : 3%;
+}
+#tbtv9{
+        position: absolute;
+        top : 40%;
+    left : 50%;
+}
+#tbtv10{
+        position: absolute;
+        top : 67%;
+    left : 42%;
+}
+#tbtv11{
+        position: absolute;
+        top : 55%;
+    left : 88%;
+}
+#tbt1{
+        position: absolute;
+        top : 80%;
+    left : 15%;
+}
+#tbt2{
+        position: absolute;
+        top : 80%;
+    left : 42.5%;
+}
+#tbt3{
+        position: absolute;
+        top : 80%;
+    left : 70%;
+}
+
+#tnext {
+    position: absolute;
+    top : 100%;
+    left : 85%;
+}
+
+/* QCS */
+
+#tqres{
+    position: absolute;
+    top : 85%;
+    left : 37%;
+}
+
+#tqcs{
+    font-style: italic;
+    font-size: 130%;
+    text-align: center;
+    top: 10%;
+}
+
+#tapprouvezvous{
+    position: absolute;
+    font-style: italic;
+    top : 25%;
+    left : 40%;
+}
+
+#tmesure{
+    position: absolute;
+    top : 30%;
+    left : 30%;
+    padding-right: 20%;
+    font-size: large;
+    text-align: justify;
+}
+
+#toui{
+        position: absolute;
+        top : 77%;
+    left : 42%;
+    padding: 3px;
+}
+
+#tnon{
+        position: absolute;
+        top : 77%;
+    left : 55%;
+    padding: 3px;
+}
+
+#tpasser{
+        position: absolute;
+        top : 82%;
+    left : 45%;
+}
+
+
+/* RESULTATS */
+
+
+#tresult{
+    position: absolute;
+    top : 8%;
+    left: 20%;
+    font-style: italic;
+    font-size: 130%;
+}
+
+#taffichres{
+        position: absolute;
+        top : 50%;
+    left : 10%;
+}
+
+#timgmlp {
+    position : absolute;
+    top : 20%;
+    left : 30%;
+    width : 35%;
+    height : 22%;
+}
+
+#timgmcrn {
+    position : absolute;
+    top : 20%;
+    left : 30%;
+    width : 35%;
+    height : 22%;
+}
+
+#treturndeb{
+    position: absolute;
+    top : 85%;
+    left : 60%;
+}
+
+#tegalite {
+    position : absolute;
+    top : 20%;
+    left : 12%;
+    width : 35%;
+    height : 22%;
+}
+
+#timggagneg {
+    position: absolute;
+    top : 20%;
+    left : 52%;
+    width : 35%;
+    height : 22%;
+}
