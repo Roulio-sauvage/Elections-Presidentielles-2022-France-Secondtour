@@ -76,6 +76,7 @@ var fait = false
 var mc = 0
 var lp = 0
 var qmc = 0
+var qlp = 0
 
 
 //LISTES DE MESURES
@@ -95,7 +96,7 @@ const emmdico = {
     'Favoriser une fin de vie plus humaine  : lancer une convention citoyenne qui associera citoyens, spécialistes de l’éthique, professionnels',
     "Étendre la caution publique pour les locataires afin de faciliter l'accès au logement tout en sanctionnant les mauvais payeurs",
     'Verser le RSA uniquement si une activité de 15 à 20h par semaine est pratiquée (une formation, un apprentissage...)',
-    'Donner la responsabilité en matière de logement, et les financements qui vont avec, aux communes et aux intercommunalités',
+    'Déployer le service national universel, expérimenté depuis 2017, pour nos jeunes',
     "Permettre à tous les couples vivant ensemble de réduire leurs impôts comme s'ils étaient mariés ou pacsés",
     'Multiplier les « tiers-lieux » (espaces de travail partagés, de production locale, de recyclage...)',
     'Recruter 50 000 infirmiers(ières) et aides-soignant(e)s de plus dans les Eh pad',
@@ -103,8 +104,8 @@ const emmdico = {
     'Simplifier le mille-feuille territorial  : les élus départementaux seront les mêmes que les élus régionaux, avec un seul « conseiller territorial ». Les compétences seront clarifiées  : une mission, un responsable',
     'Baisser les charges pour les indépendants  : le revenu augmentera de 550 euros par an quand on gagne l’équivalent du SMIC',
     'Faire dépendre obligatoirement la rémunération des dirigeants des grandes entreprises du respect des objectifs environnementaux et sociaux de l’entreprise',
-    'Réviser la politique d’achat de l’État  : l’objectif prioritaire sera d’acheter local, plutôt que d’acheter toujours moins cher, pour développer l’innovation et les filières françaises',
-    'Achever le doublement de la présence des forces de l’ordre sur la voie publique et le déploiement de 200 nouvelles brigades pour plus de gendarmes en ruralité',
+    'Pour ceux qui s’engagent dans la durée comme réservistes, les études seront financées à hauteur de 2 500 euros par an pendant 5 ans',
+    'Un filtre anti-arnaques avertira en temps réel tous les usagers d’Internet avant qu’ils ne se rendent sur un site potentiellement piégé',
     'Donner des titres de long séjour seulement pour ceux qui réussissent un examen de français et s’insèrent professionnellement'],
     defe : ['Investir 2% du PIB dans les dépenses militaires', 'Renforcer les capacités des armées européennes et leur coordination', "Doubler le nombre de réservistes opérationnels dans les armées d'ici 2027. ", 'Moderniser les armées : armes électromagnétiques, camouflage optique pour les véhicules de combat, drones sous-marins, missiles hypersoniques, nanosatellites de surveillance spatiale…', "Renforcer les armées : livraison de plus de 60 chasseurs Rafale supplémentaires, 5 nouveaux sous-marins nucléaires d’attaque, 1 250 nouveaux véhicules blindés polyvalents."],
     cult : ['Étendre le pass Culture pour accéder plus jeune à la culture', 'Investir pour construire des métavers européens et proposer des expériences en réalité virtuelle, autour de nos musées, de notre patrimoine et de nouvelles créations, en protégeant les droits d’auteur et droits voisins', 'Instaurer de nouvelles commandes publiques artistiques à travers la France pour soutenir les jeunes créateurs', 'Moderniser l’État grâce au numérique', 'Généraliser l’enseignement du code informatique et des usages numériques à partir de la 5e'],   
@@ -284,8 +285,6 @@ function series_de_q() {
         nombreq-=1
         lrep.push("oui")
         boucllq+=1
-        console.log(Lq)
-        console.log(lrep)
         mesure.innerHTML=Lq[boucllq]
         qres.innerHTML="Il vous reste "
         qres.innerHTML+=nombreq.toString()
@@ -303,8 +302,6 @@ function series_de_q() {
         nombreq-=1
         lrep.push("non")
         boucllq+=1
-        console.log(Lq)
-        console.log(lrep)
         mesure.innerHTML=Lq[boucllq]
         qres.innerHTML="Il vous reste "
         qres.innerHTML+=nombreq.toString()
@@ -321,8 +318,6 @@ function series_de_q() {
     passer.addEventListener("click", function () {
         nombreq-=1
         Lq.splice(boucllq,1)
-        console.log(Lq)
-        console.log(lrep)
         mesure.innerHTML=Lq[boucllq]    
         qres.innerHTML="Il vous reste "
         qres.innerHTML+=nombreq.toString()
@@ -340,8 +335,8 @@ function series_de_q() {
 
 // SAVOIR SI LA MESURE PROVIENT DE MACRON
 function provmacron(mesure){
-    for (let i = 0; i<12; i++) {
-        if (Object.values(emmdico)[i].indexOf(mesure)!==-1) {
+    for (let j = 0; j<12; j++) {
+        if (Object.values(emmdico)[j].indexOf(mesure)!==-1) {
             return true
         }
     }
@@ -478,40 +473,52 @@ function stepq () {
         j+=1
     }
     Lq = _.shuffle(Lq)
+
+
+
+
+
     series_de_q()
 }
 
+//RESULTATS
 function stepr () {
     VisiSt("result")
-   for (let i =0; i<Lq.length; i++) {
-       if (lrep[i]=="oui") {
-           if (provmacron(Lq[i])==true) {
-               mc+=1
-           }
-           else {
+    for (let i =0; i<Lq.length; i++) {
+        if (lrep[i]=="oui") {
+            if (provmacron(Lq[i])==true) {
+                mc+=1
+            }
+            else {
                lp+=1
-           }
-       }
+            }
+        }
     }
+
+
+    // C'EST CETTE FONCTION QUI POSE PROBLEME
 
 
     for (let j = 0; j<Lq.length; j++) {
         for (let i = 0; i<12; i++) {
             if (Object.values(emmdico)[i].indexOf(Lq[j])!==-1) {
                 qmc+=1
-                console.log(qmc)
+            }
+            else if (Object.values(mlpdico)[i].indexOf(Lq[j])!==-1) {
+                qlp+=1
+            }
+            else {
+                console.log("CETTE MESURE N'APPARTIENT A PERSONNE")
             }
         }
     }
 
-    console.log(Lq.length-qmc)
-    console.log(qmc)
 
-    if (qmc!==0 && Lq.length-qmc!==0) {
+    if (qmc!==0 && qlp!==0) {
         mc = mc/(qmc)*100
-        lp = lp/(Lq.length-qmc)*100
         
-
+        //POURQUOI LP EST SUPERIUER A QLP
+        lp = lp/(qlp)*100
 
         affichres.innerHTML = "Votre candidat(e) préférée parmis les deux finalistes est "
         if (mc>lp){
