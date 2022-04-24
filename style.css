@@ -517,7 +517,7 @@ body{
 #terra {
     position: absolute;
     color: red;
-    top : 75%;
+    top : 73%;
     left : 40%;
     font-size: large;
 }
@@ -599,130 +599,137 @@ body{
 #terr{
     position: absolute;
     color: red;
-    top : 85%;
-    left : 50%;
+    top : 95%;
+    left : 15%;
     font-size: large;
 }
 
 #tpre_qcs{
-        font-style: italic;
-        text-align: center;
-        font-size: 130%;
-        top : 7%;
+    font-style: italic;
+    text-align: center;
+    position: absolute;
+    font-size: 80%;
+    top : 8%;
+    left:17%;
    
 }
 #tmespref{
     position: absolute;
     top : 28%;
     left : 10%;
+    font-family: sans-serif;
 }
 #ttemps{
     position: absolute;
-    top : 70%;
+    top : 80%;
     left : 10%;
+    font-family: sans-serif;
 }
 #texpli{
     position: absolute;
-    top : 15%;
+    top : 12%;
     left : 10%;
-    font-size: large;
+    padding-right: 13%;
+    font-size: 100%;
+    text-align: justify;
+    font-weight: bold;
 }
 
-#tbtv1{
+#tbtv1{ /*AFFAIRES ETRANGERES*/
+    position: absolute;
+    top : 50%;
+    left : 0.5%;
+}
+#tbtv2{ /*AGRICULTURE*/
+    position: absolute;
+    top : 73%;
+    left : 0.5%;
+
+}
+#tbtv3{ /*ECONOMIE ET FINANCE*/
+    position: absolute;
+    top : 55%;
+    left : 38%;
+}
+
+#tbtv4{ /*CULTURE*/
     position: absolute;
     top : 45%;
     left : 5%;
 }
 
-#tbtv2{
+#tbtv5{ /*DEFENSE*/
+    position: absolute;
+    top : 55%;
+    left : 80%;
+}
+#tbtv6{ /*ECOLOGIE*/
+    position: absolute;
+    top : 65%;
+    left : 0.5%;
+}
+#tbtv7{ /*ENSEIGNEMENT*/
+    position: absolute;
+    top : 50%;
+    left : 69%;
+}
+#tbtv8{ /*INTERIEUR*/
     position: absolute;
     top : 60%;
-    left : 1.5%;
-
+    left : 0.5%;
 }
-
-#tbtv3{
+#tbtv9{ /*JUSTICE*/
+    position: absolute;
+    top : 55%;
+    left : 0.5%;
+}
+#tbtv10{ /*TRAVAIL*/
     position: absolute;
     top : 45%;
-    left : 63%;
+    left : 60%;
 }
-
-#tbtv4{
+#tbtv11{ /*SANTE*/
     position: absolute;
-    top : 40%;
-    left : 3%;
-}
-
-#tbtv5{
-        position: absolute;
-        top : 40%;
-    left : 84.5%;
-}
-#tbtv6{
-        position: absolute;
-        top : 55%;
-    left : 2%;
-}
-#tbtv7{
-        position: absolute;
-        top : 50%;
-    left : 71%;
-}
-#tbtv8{
-        position: absolute;
-        top : 50%;
-    left : 3%;
-}
-#tbtv9{
-        position: absolute;
-        top : 40%;
-    left : 50%;
-}
-#tbtv10{
-        position: absolute;
-        top : 67%;
-    left : 42%;
-}
-#tbtv11{
-        position: absolute;
-        top : 55%;
-    left : 88%;
+    top : 60%;
+    left : 87%;
 }
 #tbt1{
-        position: absolute;
-        top : 80%;
-    left : 15%;
+    position: absolute;
+    top : 92%;
+    left : 13%;
 }
 #tbt2{
-        position: absolute;
-        top : 80%;
-    left : 42.5%;
+    position: absolute;
+    top : 92%;
+    left : 40.5%;
 }
 #tbt3{
-        position: absolute;
-        top : 80%;
-    left : 70%;
+    position: absolute;
+    top : 92%;
+    left : 68%;
 }
 
 #tnext {
     position: absolute;
-    top : 100%;
-    left : 85%;
+    top : 110%;
+    left : 80%;
 }
 
 /* QCS */
 
 #tqres{
     position: absolute;
-    top : 85%;
-    left : 37%;
+    top : 100%;
+    left : 30%;
 }
 
 #tqcs{
     font-style: italic;
-    font-size: 130%;
     text-align: center;
-    top: 10%;
+    position: absolute;
+    font-size: 80%;
+    top : 8%;
+    left:40%;
 }
 
 #tapprouvezvous{
@@ -739,26 +746,30 @@ body{
     padding-right: 20%;
     font-size: large;
     text-align: justify;
+    font-family: monospace;
 }
 
 #toui{
-        position: absolute;
-        top : 77%;
-    left : 42%;
-    padding: 3px;
+    position: absolute;
+    top : 80%;
+    left : 35%;
+    border-radius: 50%;
+    padding: 2%;
 }
 
 #tnon{
-        position: absolute;
-        top : 77%;
+    position: absolute;
+    top : 80%;
     left : 55%;
-    padding: 3px;
+    border-radius: 50%;
+    padding: 2%;
 }
 
 #tpasser{
-        position: absolute;
-        top : 82%;
-    left : 45%;
+    position: absolute;
+    top : 90%;
+    left : 42%;
+    padding: 2%;
 }
 
 
@@ -815,4 +826,3 @@ body{
     left : 52%;
     width : 35%;
     height : 22%;
-}
