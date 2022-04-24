@@ -342,7 +342,6 @@ function series_de_q() {
 function provmacron(mesure){
     for (let i = 0; i<12; i++) {
         if (Object.values(emmdico)[i].indexOf(mesure)!==-1) {
-            qmc+=1
             return true
         }
     }
@@ -494,6 +493,19 @@ function stepr () {
            }
        }
     }
+
+
+    for (let j = 0; j<Lq.length; j++) {
+        for (let i = 0; i<12; i++) {
+            if (Object.values(emmdico)[i].indexOf(Lq[j])!==-1) {
+                qmc+=1
+                console.log(qmc)
+            }
+        }
+    }
+
+    console.log(Lq.length-qmc)
+    console.log(qmc)
 
     if (qmc!==0 && Lq.length-qmc!==0) {
         mc = mc/(qmc)*100
