@@ -401,7 +401,7 @@ function stepp () {
     VisiSt("pre_qcs")
     err.innerHTML = ""
     if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        plus_dinfos.style.visibility = "terr"
+        err.id = "terr"
     } else {
         err.id = "err"
     }
