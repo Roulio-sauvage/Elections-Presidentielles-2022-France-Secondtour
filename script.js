@@ -74,6 +74,7 @@ var lrep = []
 var fait = false
 var mc = 0
 var lp = 0
+var qmc = 0
 
 
 //LISTES DE MESURES
@@ -275,13 +276,15 @@ function series_de_q() {
     var nombreq = Lq.length    
     mesure.innerHTML=Lq[0]
     qres.innerHTML="Il vous reste "
-        qres.innerHTML+=nombreq.toString()
-        qres.innerHTML+=" questions"
+    qres.innerHTML+=nombreq.toString()
+    qres.innerHTML+=" questions"
 
     oui.addEventListener("click", function () {
         nombreq-=1
         lrep.push("oui")
         boucllq+=1
+        console.log(Lq)
+        console.log(lrep)
         mesure.innerHTML=Lq[boucllq]
         qres.innerHTML="Il vous reste "
         qres.innerHTML+=nombreq.toString()
@@ -299,6 +302,8 @@ function series_de_q() {
         nombreq-=1
         lrep.push("non")
         boucllq+=1
+        console.log(Lq)
+        console.log(lrep)
         mesure.innerHTML=Lq[boucllq]
         qres.innerHTML="Il vous reste "
         qres.innerHTML+=nombreq.toString()
@@ -315,6 +320,8 @@ function series_de_q() {
     passer.addEventListener("click", function () {
         nombreq-=1
         Lq.splice(boucllq,1)
+        console.log(Lq)
+        console.log(lrep)
         mesure.innerHTML=Lq[boucllq]    
         qres.innerHTML="Il vous reste "
         qres.innerHTML+=nombreq.toString()
@@ -334,6 +341,7 @@ function series_de_q() {
 function provmacron(mesure){
     for (let i = 0; i<12; i++) {
         if (Object.values(emmdico)[i].indexOf(mesure)!==-1) {
+            qmc+=1
             return true
         }
     }
@@ -345,7 +353,6 @@ function provmacron(mesure){
 //ACCUEIL
 function stepa () {
     VisiSt("accueil")
-    console.log(Object.values(mlpdico)[0].length)
     err.style.visibility = "visible"
     if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
         plus_dinfos.style.visibility = "terra"
@@ -433,6 +440,7 @@ function stepp () {
         })
     }
     next.addEventListener("click", function () {
+        console.log("suivant")
         if(temps.length !== 0 && valeurs.length > 3) {
             stepq()
         }
@@ -483,53 +491,63 @@ function stepr () {
            }
        }
     }
-    mc = mc/(Lq.length/2)*100
-    lp = lp/(Lq.length/2)*100
-    affichres.innerHTML = "Votre candidat(e) préférée parmis les deux finalistes est "
-    if (mc>lp){
-        imaggagneg.style.visibility = "hidden"
-        if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-            imggagn.id = "timgmcrn"
+
+    if (qmc!==0 && Lq.length-qmc!==0) {
+        mc = mc/(qmc)*100
+        lp = lp/(Lq.length-qmc)*100
+        console.log(qmc)
+        
+
+
+        affichres.innerHTML = "Votre candidat(e) préférée parmis les deux finalistes est "
+        if (mc>lp){
+            imaggagneg.style.visibility = "hidden"
+            if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                imggagn.id = "timgmcrn"
+            }
+            else {
+                imggagn.id = "imgmcrn"
+            }
+            imggagn.src = "photo macron.jpg"
+            affichres.innerHTML += "Emmanuel Macron : vous adhérez à "
+            affichres.innerHTML += parseInt(mc).toString()
+            affichres.innerHTML += " % de ses mesures contre "
+            affichres.innerHTML += parseInt(lp).toString()
+            affichres.innerHTML +=" % des mesures de Marine Le Pen."
+        }
+        else if (lp>mc){
+            imaggagneg.style.visibility = "hidden"
+            if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                imggagn.id = "timgmlp"
+            }
+            else {
+                imggagn.id = "imgmlp"
+            }
+            imggagn.src = "photo marine.jpg"
+            affichres.innerHTML += "Marine Le Pen : vous adhérez à "
+            affichres.innerHTML += parseInt(lp).toString()
+            affichres.innerHTML += " % de ses mesures contre "
+            affichres.innerHTML += parseInt(mc).toString()
+            affichres.innerHTML +=" % des mesures d'Emmanuel Macron."
         }
         else {
-            imggagn.id = "imgmcrn"
+            if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                imggagn.id = "tegalite"
+                imaggagneg.id = "timggagneg"
+            }
+            else {
+                imggagn.id = "egalite"
+                imaggagneg.id = "imggagneg"
+            }
+            imggagn.src = "photo marine.jpg"
+            imaggagneg.src = "photo macron.jpg"
+            affichres.innerHTML = "Egalité ! Vous adhérez à "
+            affichres.innerHTML += parseInt(mc).toString()
+            affichres.innerHTML += " % des mesures de Marine LePen et d'Emmanuel Macron."
         }
-        imggagn.src = "photo macron.jpg"
-        affichres.innerHTML += "Emmanuel Macron : vous adhérez à "
-        affichres.innerHTML += parseInt(mc).toString()
-        affichres.innerHTML += " % de ses mesures contre "
-        affichres.innerHTML += parseInt(lp).toString()
-        affichres.innerHTML +=" % des mesures de Marine Le Pen."
-    }
-    else if (lp>mc){
-        imaggagneg.style.visibility = "hidden"
-        if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-            imggagn.id = "timgmlp"
-        }
-        else {
-            imggagn.id = "imgmlp"
-        }
-        imggagn.src = "photo marine.jpg"
-        affichres.innerHTML += "Marine Le Pen : vous adhérez à "
-        affichres.innerHTML += parseInt(lp).toString()
-        affichres.innerHTML += " % de ses mesures contre "
-        affichres.innerHTML += parseInt(mc).toString()
-        affichres.innerHTML +=" % des mesures d'Emmanuel Macron."
     }
     else {
-        if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-            imggagn.id = "tegalite"
-            imaggagneg.id = "timggagneg"
-        }
-        else {
-            imggagn.id = "egalite"
-            imaggagneg.id = "imggagneg"
-        }
-        imggagn.src = "photo marine.jpg"
-        imaggagneg.src = "photo macron.jpg"
-        affichres.innerHTML = "Egalité ! Vous adhérez à "
-        affichres.innerHTML += parseInt(mc).toString()
-        affichres.innerHTML += " % des mesures de Marine LePen et d'Emmanuel Macron."
+        affichres.innerHTML = "Vous avez passé toutes les mesures d'Emmanuel Macron ou de Marine Le Pen ! Répondez avec plus de soin !"
     }
     returndeb.addEventListener("click", function() {
         fait = true
