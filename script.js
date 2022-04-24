@@ -3,6 +3,7 @@
 //template
 const title = document.getElementById("title")
 const source_et_contact = document.getElementById("source_et_contact")
+const zoom = document.getElementById("zoom")
 
 //accueil
 const err = document.getElementById("err")
@@ -47,7 +48,7 @@ const returndeb = document.getElementById("returndeb")
 const imggagn = document.getElementById("imggagn")
 const lr = [result,affichres,returndeb,imggagn,imaggagneg]
 
-global = [contexte,texte_lp,texte_mc,plus_dinfos,photo_lp,photo_mc,qcsoupas,go,resultac,title,pre_qcs,mespref,qtemps,expli,err,next,qcs,approuvezvous,mesure,oui,non,passer,qres,result,affichres,returndeb,imggagn,imaggagneg,source_et_contact]
+const global = [contexte,texte_lp,texte_mc,plus_dinfos,photo_lp,photo_mc,qcsoupas,go,resultac,title,pre_qcs,mespref,qtemps,expli,err,next,qcs,approuvezvous,mesure,oui,non,passer,qres,result,affichres,returndeb,imggagn,imaggagneg,source_et_contact]
 
 /*IMPLANTATION DU CSS SUR TELEPHONE*/
 if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
@@ -355,7 +356,9 @@ function stepa () {
     VisiSt("accueil")
     err.style.visibility = "visible"
     if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        plus_dinfos.style.visibility = "terra"
+        plus_dinfos.style.visibility = "hidden"
+        zoom.style.visibility = "hidden"
+        err.id = "terra"
     } else {
         err.id = "erra"
     }
@@ -495,7 +498,6 @@ function stepr () {
     if (qmc!==0 && Lq.length-qmc!==0) {
         mc = mc/(qmc)*100
         lp = lp/(Lq.length-qmc)*100
-        console.log(qmc)
         
 
 
