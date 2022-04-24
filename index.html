@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elections Presidentielles de France 2022 - Second tour</title>
+    <link  type="text/css" rel="stylesheet" href="style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
 </head>
 <body>
-    <p>SITE TEMPORAIREMENT INDISPONIBLE. RETOUR A LA NORMALE A 12h MAXIMUM.</p>
+    <!-- TEMPLATE -->
+    <h1 id = "title">S'orienter au second tour de l'élection présidentielle</h1>
+    <p id = "source_et_contact">Source : Le Monde, Wikipédia, HugoDecrypte, l'internaute&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp contact : anonyme_pro@yahoo.com</p>
+    <p id = "zoom">Si vous êtes sur odinateur, dézoomez ou zoomez la fenêtre à votre guise</p>
+
+    <!-- ACCUEIL -->
+    <p id = "contexte">Les résultats du premier tour de l'élection présidentielles sont tombés le dimanche 10 avril aux estimations de 20 heures. Verdict : Emmanuel Macron (27,8 %) et Marine Le Pen (23,1 %) au second tour, comme en 2017 ! Jean-Luc Mélanchon n'était pas loin non plus avec 22 % des voix.<br>Ce site a donc été créé pour vous orienter objectivement sur votre choix du second tour de la présidentielle de 2022.</p>
+    <p id = "texte_lp"><span>Marine Le pen</span>, fille de Jean-Marie Le Pen, est née le 5 août 1968 à Neuilly-sur-Seine. Elle a fait des études de droit et devient avocate en 1992 avant d'être élue conseillière régionale du Nord-Pas-de Calais en 1998, puis députée européenne en 2014, et députée du Pas-De-Calais en 2017. C'est sa troisième candidature à l'élection présidentielle : elle avait obtenu 17,6% des voix en 2012 au premier tour, 21,3% au premier tour de 2017 et 33,9% au second tour.</p>
+    <p id = "texte_mc"><span>Emmanuel Macron</span>, actuel Président de la République depuis 2017, est né le 21 Décembre 1977 à Amiens. Il a été diplômé de l'ENA (École Nationale d'Administration) en 2004 et devient banquier d'affaires chez Rothschild en 2008. Il devient conseiller de François Hollande en 2012, qui le nommera en 2014 Ministre de l'économie de l'industrie et du numérique. Il démissione alors en 2016 pour fonder son propre parti "En Marche", et se présente à l'élection présidentielle de 2017 qu'il remportera, avec 24% des voix au premier tour et 66% au second tour.</p>
+    <p id = "plus_dinfos">Plus d'informations :<br> <a href="https://mlafrance.fr/programme" target="_blank" >Programme de Marine Le Pen</a><br><a href="https://avecvous.fr/projet-presidentiel" target="_blank">Programme d'Emmanuel Macron</a><br><a href="https://www.youtube.com/watch?v=v6g0u6yrDGc" target="_blank" >Voir le Débat d'entre deux tour</a></p>
+    <img id = "photo_lp" src="photo marine.jpg" alt="Photo de lepen">
+    <img id = "photo_mc" src="photo macron.jpg" alt="Photo de macron">
+    <p id = "qcsoupas">Répondez à un questionnaire qui vous permettra de savoir quel est votre candidat(e) favori(te) pour le second tour !</p>
+    <button id = "go">Commencer le test</button>
+    <p id = "resultac"></p>
+
+    <!-- DEBUT QCS -->
+    <p id = "pre_qcs">Question préléminaires au questionnaire</p>
+    <p id = "mespref">Choisissez un ou plusieurs types de mesures auxquels vous attachez une certaine importance.</p>
+    <button class = "boutontypevaleur" id = "btv1">Affaires étrangères et européennes</button>
+    <button class = "boutontypevaleur" id = "btv2">Agriculture, alimentation, pêche, ruralité et aménagement du territoire</button>
+    <button class = "boutontypevaleur" id = "btv3">Economie et finance</button>
+    <button class = "boutontypevaleur" id = "btv4">Culture et Communication</button>
+    <button class = "boutontypevaleur" id = "btv5">Défense</button>
+    <button class = "boutontypevaleur" id = "btv6">Ecologie, développement durable, transports et logement </button>
+    <button class = "boutontypevaleur" id = "btv7">Enseignement </button>
+    <button class = "boutontypevaleur" id = "btv8">Intérieur, Outre-mer, Collectivités territoriales</button>
+    <button class = "boutontypevaleur" id = "btv9">Justice et Libertés </button>
+    <button class = "boutontypevaleur" id = "btv10">Travail, emploi</button>
+    <button class = "boutontypevaleur" id = "btv11">Santé</button>
+    <p id = "temps">Combien de temps avez-vous pour réaliser le questionnaire ?</p>
+    <button class = "boutontemps" id = "bt1">10 minutes</button>
+    <button class = "boutontemps" id = "bt2">20 minutes</button>
+    <button class = "boutontemps" id = "bt3">30 minutes</button>
+    <p id = "expli">Répondez à ces deux questions qui nous permettront de générer un questionnaire plus adapté</p>
+    <p id = "err"></p>
+    <button id = "next">Suivant</button>
+
+    <!-- QCS -->
+    <p id = "qres"></p>
+    <p id = "qcs">Questionnaire</p>
+    <p id = "approuvezvous">approuvez-vous...</p>
+    <p id = "mesure">[mesure]</p>
+    <button id = "oui">V</button>
+    <button id = "non">X</button>
+    <button id = "passer">passer</button>
+
+    <!-- RESULTATS -->
+    <img id = "imggagneg" src="">
+    <p id = "result">Resultats du questionnaire</p>
+    <p id = "affichres">[les resultats]</p>
+    <img id = "imggagn"src="">
+    <button id = "returndeb">Retour à la page d'accueil</button>
+
+    <!-- CHARGEMENT DU SCRIPT -->
+    <script type = "text/javascript" src = "script.js"></script>
 </body>
 </html>
